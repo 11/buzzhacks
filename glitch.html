@@ -1,0 +1,717 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: #292929;
+            }
+
+            .connecting{
+                opacity: 1;
+                z-index: 2;
+                background: url('./imgs/connecting.png') no-repeat center center fixed;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                margin-left: auto;
+                margin-right: auto;
+
+                animation-name: fadeIn;
+                animation-delay: 1s;
+                animation-duration: 2s;
+            }
+
+            @keyframes fadeIn{
+                0%{opacity: 0;}
+                100%{opacity: 1;}
+            }
+           
+            .loading-bar-1{
+                opacity: 0;
+                width: 15px;
+                height: 24px;
+                left: 39.2%;
+                top: 51.1%;
+                background-color: #ffdae8;
+                position: absolute;
+
+                animation-name: fadeIn;
+                animation-delay: 2s;
+                animation-duration: .1s;
+                animation-fill-mode: forwards;
+            }
+
+            .loading-bar-2{
+                opacity: 0;
+                width: 15px;
+                height: 24px;
+                left: 40.5%;
+                top: 51.1%;
+                background-color: #ffdae8;
+                position: absolute;
+
+                animation-name: fadeIn;
+                animation-delay: 2.1s;
+                animation-duration: .1s;
+                animation-fill-mode: forwards;
+            }
+
+            .loading-bar-3{
+                opacity: 0;
+                width: 15px;
+                height: 24px;
+                left: 41.8%;
+                top: 51.1%;
+                background-color: #ffdae8;
+                position: absolute;
+
+                animation-name: fadeIn;
+                animation-delay: 2.2s;
+                animation-duration: .1s;
+                animation-fill-mode: forwards;
+            }
+
+            .loading-bar-4{
+                opacity: 0;
+                width: 15px;
+                height: 24px;
+                left: 43.1%;
+                top: 51.1%;
+                background-color: #ffdae8;
+                position: absolute;
+
+                animation-name: fadeIn;
+                animation-delay: 2.3s;
+                animation-duration: .1s;
+                animation-fill-mode: forwards;
+            }
+
+            .loading-bar-5{
+                opacity: 0;
+                width: 15px;
+                height: 24px;
+                left: 44.4%;
+                top: 51.1%;
+                background-color: #ffdae8;
+                position: absolute;
+
+                animation-name: fadeIn;
+                animation-delay: 2.4s;
+                animation-duration: .1s;
+                animation-fill-mode: forwards;
+            }
+
+            .loading-bar-6{
+                opacity: 0;
+                width: 15px;
+                height: 24px;
+                left: 45.7%;
+                top: 51.1%;
+                background-color: #ffdae8;
+                position: absolute;
+
+                animation-name: fadeIn;
+                animation-delay: 7s;
+                animation-duration: .1s;
+                animation-fill-mode: forwards;
+            }
+
+            .loading-bar-7{
+                opacity: 0;
+                width: 15px;
+                height: 24px;
+                left: 47.0%;
+                top: 51.1%;
+                background-color: #ffdae8;
+                position: absolute;
+
+                animation-name: fadeIn;
+                animation-delay: 8s;
+                animation-duration: .1s;
+                animation-fill-mode: forwards;
+            }
+            
+            .loading-bar-8{
+                opacity: 0;
+                width: 15px;
+                height: 24px;
+                left: 48.3%;
+                top: 51.1%;
+                background-color: #ffdae8;
+                position: absolute;
+
+                animation-name: fadeIn;
+                animation-delay: 9s;
+                animation-duration: .1s;
+                animation-fill-mode: forwards;
+            }
+            /**************************
+             *        Glitches        *
+             **************************/
+            .glitch1{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-1.png');
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 4.2s;
+                animation-duration: .5s;
+                overflow: hidden;
+            }
+            
+            .glitch2{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-2.png');
+                position: absolute;
+                top: 200px;
+                left: 500px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 5s;
+                animation-duration: 1.2s;
+                overflow: hidden;
+            }
+
+            .glitch3{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-3.png');
+                position: absolute;
+                top: 500px;
+                left: 123px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 6.2s;
+                animation-duration: 1.4s;
+                overflow: hidden;
+            }
+
+            /* Kill Screen */
+            .glitch4{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-4.png');
+                position: absolute;
+                top: 422px;
+                left: 600px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 6.9s;
+                animation-duration: .7s;
+                overflow: hidden;
+            }
+
+            .glitch5{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-5.png');
+                position: absolute;
+                top: 500px;
+                left: 123px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 11s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+            .glitch6{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-6.png');
+                position: absolute;
+                top: 80px;
+                left: 800px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 11.8s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+            .glitch7{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-7.png');
+                position: absolute;
+                top: 3px;
+                left: 622px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 12s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+            .glitch8{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-8.png');
+                position: absolute;
+                top: 433px;
+                left: 330px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 10.9s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+            .glitch9{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-9.png');
+                position: absolute;
+                top: 700px;
+                left: 123px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 11.6s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+            .glitch10{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-10.png');
+                position: absolute;
+                top: 900px;
+                left: 123px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 11.3s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+            
+            .glitch11{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-11.png');
+                position: absolute;
+                top: 500px;
+                left: 596px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 11.2s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+            .glitch12{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-12.png');
+                position: absolute;
+                top: 900px;
+                left: 123px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 11.4s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+            .glitch13{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-13.png');
+                position: absolute;
+                top: 15px;
+                left: 233px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 11s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+
+            .glitch14{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-14.png');
+                position: absolute;
+                top: 333px;
+                left: 789px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 12s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+            .glitch15{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-15.png');
+                position: absolute;
+                top: 297px;
+                left: 611px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 11.2s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+            .glitch16{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-4.png');
+                position: absolute;
+                top: 932px;
+                left: 400px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 11.7s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+            .glitch17{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-10.png');
+                position: absolute;
+                top: 443px;
+                left: 777px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 11.3s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+            .glitch18{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-7.png');
+                position: absolute;
+                top: 800px;
+                left: 777px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 11s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            } 
+           
+            .glitch19{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-3.png');
+                position: absolute;
+                top: 438px;
+                left: 999px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 13s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+            .glitch20{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-8.png');
+                position: absolute;
+                top: 622px;
+                left: 300px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 11s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+            .glitch21{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-8.png');
+                position: absolute;
+                top: 327px;
+                left: 300px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 11s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+            .glitch22{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-8.png');
+                position: absolute;
+                top: 892px;
+                left: 100px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 11s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+            .glitch23{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-8.png');
+                position: absolute;
+                top: 500px;
+                left: 300px;
+                height: 100px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 11s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+            .glitch24{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-8.png');
+                position: absolute;
+                top: 622px;
+                left: 100px;
+                height: 70px;
+                width: 10px;
+                
+                animation-name: glitch;
+                animation-delay: 11s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+            .glitch25{
+                opacity: 0;
+                background-image: url('./imgs/glitches/glitch-8.png');
+                position: absolute;
+                top: 900px;
+                left: 300px;
+                height: 10px;
+                width: 100px;
+                
+                animation-name: glitch;
+                animation-delay: 11s;
+                animation-duration: .7s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+
+            @keyframes glitch{
+                0%{opacity: 0;}
+                1%{opacity: 1;}
+                100%{opacity: 1;}
+            }
+            
+            .cut-and-bootup{
+                opacity: 0;
+                z-index: 10;             
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0px;
+                left: 0px;
+                background-color: black;
+                
+                animation-name: cut;
+                animation-delay: 15s;
+                animation-duration: .1s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes cut{
+                100%{opacity: 1;}
+            }
+            
+            .bios-load-up{
+                z-index: 100;
+                opacity: 1;
+                background: url('./imgs/BIOS/top.png') no-repeat center center fixed;
+                position: absolute;
+                top: 500px;
+                left: 500px;
+
+                animation-name: fadeIn;
+                animation-delay: 17s;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+            
+            .load-img-1{
+                z-index: 100;
+                opacity: 0;
+                background: url('./imgs/BIOS/middle-1.png') no-repeat center center fixed;
+                position: absolute;
+                top: 100px;
+                left: 200px;
+
+                animation-name: fadeIn;
+                animation-delay: 18s;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+
+            .load-img-2{
+                z-index: 100;
+                opacity: 0;
+                background: url('./imgs/BIOS/middle-2.png') no-repeat center center fixed;
+                position: absolute;
+                top: 200px;
+                left: 300px;
+
+                animation-name: fadeIn;
+                animation-delay: 18s;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+
+            .load-img-3{
+                z-index: 100;
+                opacity: 0;
+                background: url('./imgs/BIOS/middle-3.png') no-repeat center center fixed;
+                position: absolute;
+                top: 0px;
+                left: 400px;
+
+                animation-name: fadeIn;
+                animation-delay: 18s;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+
+            .load-img-4{
+                z-index: 100;
+                opacity: 0;
+                background: url('./imgs/BIOS/middle-4.png') no-repeat center center fixed;
+                position: absolute;
+                top: 0px;
+                left: 200px;
+
+                animation-name: fadeIn;
+                animation-delay: 18s;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+
+            .load-img-5{
+                z-index: 100;
+                opacity: 0;
+                background: url('./imgs/BIOS/middle-1.png') no-repeat center center fixed;
+                position: absolute;
+                top: 0px;
+                left: 200px;
+
+                animation-name: fadeIn;
+                animation-delay: 18s;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+
+            .load-img-6{
+                z-index: 100;
+                opacity: 0;
+                background: url('./imgs/BIOS/middle-1.png') no-repeat center center fixed;
+                position: absolute;
+                top: 0px;
+                left: 200px;
+
+                animation-name: fadeIn;
+                animation-delay: 18s;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="connecting"></div>
+        
+        <div class="loading-bar-1"></div>
+        <div class="loading-bar-2"></div>
+        <div class="loading-bar-3"></div>
+        <div class="loading-bar-4"></div>
+        <div class="loading-bar-5"></div>
+        <div class="loading-bar-6"></div>
+        <div class="loading-bar-7"></div>
+        <div class="loading-bar-8"></div>
+        <div class="loading-bar-9"></div>
+        <div class="loading-bar-10"></div>
+        
+        <div class="glitch1"></div>
+        <div class="glitch2"></div>
+        <div class="glitch3"></div>
+        <div class="glitch4"></div>
+        <div class="glitch5"></div>
+        <div class="glitch6"></div>
+        <div class="glitch7"></div>
+        <div class="glitch8"></div>
+        <div class="glitch9"></div>
+        <div class="glitch12"></div>
+        <div class="glitch13"></div>
+        <div class="glitch14"></div>
+        <div class="glitch15"></div>
+        <div class="glitch16"></div>
+        <div class="glitch17"></div>
+        <div class="glitch18"></div>
+        <div class="glitch19"></div>
+        <div class="glitch20"></div>
+        <div class="glitch21"></div>
+        <div class="glitch22"></div>
+        <div class="glitch23"></div>
+        <div class="glitch24"></div>
+        <div class="glitch25"></div>
+        
+        <audio controls="controls" style="visibility: hidden;" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 15000)">
+                <source src="startup-sound.mp3" type="audio/mp3" />
+        </audio>
+    </body>
+</html>
