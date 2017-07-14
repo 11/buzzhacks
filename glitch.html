@@ -20,6 +20,16 @@
                 animation-duration: 2s;
             }
 
+            .glitch-screen {
+                animation-name: flash 1s linear 2;
+                animation-delay: 15s;
+            }
+
+            @keyframes flash{
+                0% {opacity: 1;}
+                100% {opacity: 0;}
+            }
+
             @keyframes fadeIn{
                 0%{opacity: 0;}
                 100%{opacity: 1;}
@@ -551,7 +561,7 @@
                 100%{opacity: 1;}
             }
             
-            .cut-and-bootup{
+/*            .cut-and-bootup{
                 opacity: 0;
                 z-index: 10;             
                 position: absolute;
@@ -565,7 +575,7 @@
                 animation-delay: 15s;
                 animation-duration: .1s;
                 animation-fill-mode: forwards;
-            }
+            }*/
 
             @keyframes cut{
                 100%{opacity: 1;}
@@ -584,134 +594,51 @@
                 animation-duration: 2s;
                 animation-fill-mode: forwards;
             }
-            
-            .load-img-1{
-                z-index: 100;
-                opacity: 0;
-                background: url('./imgs/BIOS/middle-1.png') no-repeat center center fixed;
-                position: absolute;
-                top: 100px;
-                left: 200px;
-
-                animation-name: fadeIn;
-                animation-delay: 18s;
-                animation-duration: 2s;
-                animation-fill-mode: forwards;
-            }
-
-            .load-img-2{
-                z-index: 100;
-                opacity: 0;
-                background: url('./imgs/BIOS/middle-2.png') no-repeat center center fixed;
-                position: absolute;
-                top: 200px;
-                left: 300px;
-
-                animation-name: fadeIn;
-                animation-delay: 18s;
-                animation-duration: 2s;
-                animation-fill-mode: forwards;
-            }
-
-            .load-img-3{
-                z-index: 100;
-                opacity: 0;
-                background: url('./imgs/BIOS/middle-3.png') no-repeat center center fixed;
-                position: absolute;
-                top: 0px;
-                left: 400px;
-
-                animation-name: fadeIn;
-                animation-delay: 18s;
-                animation-duration: 2s;
-                animation-fill-mode: forwards;
-            }
-
-            .load-img-4{
-                z-index: 100;
-                opacity: 0;
-                background: url('./imgs/BIOS/middle-4.png') no-repeat center center fixed;
-                position: absolute;
-                top: 0px;
-                left: 200px;
-
-                animation-name: fadeIn;
-                animation-delay: 18s;
-                animation-duration: 2s;
-                animation-fill-mode: forwards;
-            }
-
-            .load-img-5{
-                z-index: 100;
-                opacity: 0;
-                background: url('./imgs/BIOS/middle-1.png') no-repeat center center fixed;
-                position: absolute;
-                top: 0px;
-                left: 200px;
-
-                animation-name: fadeIn;
-                animation-delay: 18s;
-                animation-duration: 2s;
-                animation-fill-mode: forwards;
-            }
-
-            .load-img-6{
-                z-index: 100;
-                opacity: 0;
-                background: url('./imgs/BIOS/middle-1.png') no-repeat center center fixed;
-                position: absolute;
-                top: 0px;
-                left: 200px;
-
-                animation-name: fadeIn;
-                animation-delay: 18s;
-                animation-duration: 2s;
-                animation-fill-mode: forwards;
-            }
         </style>
     </head>
 
     <body>
-
-        <div class="connecting"></div>
-        
-        <div class="loading-bar-1"></div>
-        <div class="loading-bar-2"></div>
-        <div class="loading-bar-3"></div>
-        <div class="loading-bar-4"></div>
-        <div class="loading-bar-5"></div>
-        <div class="loading-bar-6"></div>
-        <div class="loading-bar-7"></div>
-        <div class="loading-bar-8"></div>
-        <div class="loading-bar-9"></div>
-        <div class="loading-bar-10"></div>
-        
-        <div class="glitch1"></div>
-        <div class="glitch2"></div>
-        <div class="glitch3"></div>
-        <div class="glitch4"></div>
-        <div class="glitch5"></div>
-        <div class="glitch6"></div>
-        <div class="glitch7"></div>
-        <div class="glitch8"></div>
-        <div class="glitch9"></div>
-        <div class="glitch12"></div>
-        <div class="glitch13"></div>
-        <div class="glitch14"></div>
-        <div class="glitch15"></div>
-        <div class="glitch16"></div>
-        <div class="glitch17"></div>
-        <div class="glitch18"></div>
-        <div class="glitch19"></div>
-        <div class="glitch20"></div>
-        <div class="glitch21"></div>
-        <div class="glitch22"></div>
-        <div class="glitch23"></div>
-        <div class="glitch24"></div>
-        <div class="glitch25"></div>
-        <div class="cut-and-bootup"></div>
+        <div class="glitch-screen">
+            <div class="connecting"></div>
+            
+            <div class="loading-bar-1"></div>
+            <div class="loading-bar-2"></div>
+            <div class="loading-bar-3"></div>
+            <div class="loading-bar-4"></div>
+            <div class="loading-bar-5"></div>
+            <div class="loading-bar-6"></div>
+            <div class="loading-bar-7"></div>
+            <div class="loading-bar-8"></div>
+            <div class="loading-bar-9"></div>
+            <div class="loading-bar-10"></div>
+            
+            <div class="glitch1"></div>
+            <div class="glitch2"></div>
+            <div class="glitch3"></div>
+            <div class="glitch4"></div>
+            <div class="glitch5"></div>
+            <div class="glitch6"></div>
+            <div class="glitch7"></div>
+            <div class="glitch8"></div>
+            <div class="glitch9"></div>
+            <div class="glitch12"></div>
+            <div class="glitch13"></div>
+            <div class="glitch14"></div>
+            <div class="glitch15"></div>
+            <div class="glitch16"></div>
+            <div class="glitch17"></div>
+            <div class="glitch18"></div>
+            <div class="glitch19"></div>
+            <div class="glitch20"></div>
+            <div class="glitch21"></div>
+            <div class="glitch22"></div>
+            <div class="glitch23"></div>
+            <div class="glitch24"></div>
+            <div class="glitch25"></div>
+            <!-- <div class="cut-and-bootup"></div> -->
+        </div>
         
     </body>
 
-    <script>setTimeout(function(){window.location.href='startup.html'},18000);</script>
+    <script>setTimeout(function(){window.location.href='startup.html'},17000);</script>
 </html>
