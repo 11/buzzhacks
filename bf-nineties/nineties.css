@@ -1,0 +1,269 @@
+body {
+	cursor: url(img/cursor.png), auto;
+
+	font-family: Chicago;
+	color: #343434;
+	border-color: #292929;
+	background-color: #FFDAE8;
+}
+
+a {
+	color: #343434;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+div.navlink {
+	color: #292929;
+}
+
+div.navlink:hover {
+	background-color: #292929;
+	cursor: pointer;
+}
+
+div.navlink:hover a.navlink {
+	color: #ffffff;
+}
+
+div.navlink:hover {
+	color: #ffffff;
+	background-color: #292929;
+}
+
+div.dd-navlink:hover {
+	background-color: #292929;
+	cursor: pointer;
+}
+
+div.dd-navlink:hover a {
+	color: #ffffff;
+}
+
+.n-nav {
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	top: 0px;
+	background-color: #ffffff;
+	border-bottom: 3px solid #292929;
+}
+
+.n-nav li {
+	display: inline;
+}
+
+@keyframes spin {
+	0%, 100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+	}
+	25% {
+    -webkit-transform: rotate(25deg);
+    transform: rotate(45deg);
+	}
+	50% {
+    -webkit-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+	}
+	75% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+	}
+}
+
+#bf-logo:hover {
+	cursor: pointer;
+
+  animation-duration: 0.45s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  -webkit-animation-name: spin;
+  animation-name: spin;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center;
+}
+
+.n-dropdown:hover .n-dropdown-content {
+	display: block;
+}
+
+.n-dropdown-content {
+	width: 137px;
+	display: none;
+	position: absolute;
+	z-index: 2;
+
+	background-color: #ffffff;
+	border: 2px solid #292929;
+}
+
+p {
+	font-family: Roboto Mono;
+	font-size: 13px;
+}
+
+.n-flexrow {
+	display: flex;
+	/*align-items: flex-start;*/
+}
+
+.n-flexcol {
+	/*display: -webkit-flex;*/
+	display: flex;
+	/*-webkit-flex-direction: column;*/
+	flex-direction: column;
+	/*flex-wrap: wrap;*/
+}
+
+.n-buzzes {
+	border: 2px solid #292929;
+	background-color: #ffffff;
+	box-shadow: 6px 6px #292929;
+}
+
+.n-feed-item:hover {
+	cursor: pointer;
+	background-color: #EAEAEA;
+}
+
+.n-buzz-head {
+	border-bottom: 2px solid;
+}
+
+.n-sidebar-item {
+	border: 2px solid #292929;
+	border-top: 8px solid #292929;
+	background-color: #ffffff;
+	box-shadow: 4px 4px #292929;
+	font-size: 11.5px;
+}
+
+.n-sidebar-item:hover {
+	background-color: #EAEAEA;
+	/*color: #292929;*/
+	cursor: pointer;
+}
+
+@keyframes bounce {
+  0%, 75%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  65% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0, -7px, 0);
+    transform: translate3d(0, -8px, 0);
+  }
+
+  90% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0, -3px, 0);
+    transform: translate3d(0, -3px, 0);
+  }
+}
+
+.n-button-bounce:hover {
+	cursor: pointer;
+  -webkit-animation-duration: 0.45s;
+  animation-duration: 0.45s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+/* Move it (define the animation) */
+@-webkit-keyframes scroll-left {
+	 0%   { -webkit-transform: translateX(100%); }
+	 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+ 0%   { 
+	 -moz-transform: translateX(100%); /* Browser bug fix */
+	 -webkit-transform: translateX(100%); /* Browser bug fix */
+	 transform: translateX(100%); 		
+ }
+ 100% { 
+	 -moz-transform: translateX(-100%); /* Browser bug fix */
+	 -webkit-transform: translateX(-100%); /* Browser bug fix */
+	 transform: translateX(-100%); 
+ }
+}
+
+.scroll-left {	
+	 overflow: hidden;
+	 position: relative;
+	 height: 40px;
+}
+.scroll-left h2 {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 margin: 0;
+	 text-align: center;
+	 /* Starting position */
+	 -moz-transform:translateX(100%);
+	 -webkit-transform:translateX(100%);	
+	 transform:translateX(100%);
+	 /* Apply animation to this element */	
+	 -moz-animation: scroll-left 15s linear infinite;
+	 -webkit-animation: scroll-left 15s linear infinite;
+	 animation: scroll-left 15s linear infinite;
+}
+
+@keyframes blink-text {
+	0% {
+		color: cyan;
+	}
+	10% {
+		color: red;
+	}
+	20% {
+		color: #5660FF;
+	}
+	30% {
+		color: yellow;
+	}
+	40% {
+		color: magenta;
+	}
+	50% {
+		color: cyan;
+	}
+	60% {
+		color: red;
+	}
+	70% {
+		color: #5660FF;
+	}
+	80% {
+		color: yellow;
+	}
+	90% {
+		color: magenta;
+	}
+	100% {
+		color: cyan;
+	}
+}
+
+.n-blink-text {
+	 -webkit-animation: blink-text 5s infinite;
+	 animation: blink-text 5s infinite;
+}
+
+.n-author {
+	color: #979797;
+}
